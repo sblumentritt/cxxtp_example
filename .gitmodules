@@ -4,3 +4,6 @@
 [submodule "dependency/Catch2"]
 	path = dependency/Catch2
 	url = https://github.com/catchorg/Catch2.git
+[submodule "dependency/doxygen-rusted"]
+	path = dependency/doxygen-rusted
+	url = https://github.com/sblumentritt/doxygen-rusted.git

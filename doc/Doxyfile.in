@@ -42,7 +42,7 @@ SHOW_NAMESPACES        = YES
 
 SORT_MEMBER_DOCS       = NO
 
-LAYOUT_FILE =
+LAYOUT_FILE = @PROJECT_SOURCE_DIR@/dependency/doxygen-rusted/xml/layout.xml
 
 #---------------------------------------------------------------------------
 # Configuration options related to warning and progress messages
@@ -58,13 +58,14 @@ WARN_IF_DOC_ERROR      = YES
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
 INPUT                  = @PROJECT_SOURCE_DIR@/include/ \
-                         @PROJECT_SOURCE_DIR@/src/
+                         @PROJECT_SOURCE_DIR@/src/ \
+                         @PROJECT_SOURCE_DIR@/README.md \
 
 RECURSIVE              = YES
 FILE_PATTERNS          = *.hpp \
                          *.h
 
-USE_MDFILE_AS_MAINPAGE =
+USE_MDFILE_AS_MAINPAGE = README.md
 
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
@@ -76,11 +77,11 @@ VERBATIM_HEADERS       = YES
 # Configuration options related to the HTML output
 #---------------------------------------------------------------------------
 GENERATE_HTML          = YES
-GENERATE_TREEVIEW      = YES
+# GENERATE_TREEVIEW      = YES
 
-HTML_HEADER            =
-HTML_FOOTER            =
-HTML_EXTRA_STYLESHEET  =
+HTML_HEADER            = @PROJECT_SOURCE_DIR@/dependency/doxygen-rusted/html/header.html
+HTML_FOOTER            = @PROJECT_SOURCE_DIR@/dependency/doxygen-rusted/html/footer.html
+HTML_EXTRA_STYLESHEET  = @PROJECT_SOURCE_DIR@/dependency/doxygen-rusted/css/style.css
 
 #---------------------------------------------------------------------------
 # Configuration options related to the other output formats
