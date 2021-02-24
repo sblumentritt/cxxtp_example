@@ -40,17 +40,17 @@ add_postbuild_strip(${${PROJECT_NAME}_target_info_viewer})
 
 # add source files and include sub-folder
 # -------------------------------------
-# target_sources(${${PROJECT_NAME}_target_info_viewer}
-#     PRIVATE
-#         # source file
-# )
+target_sources(${${PROJECT_NAME}_target_info_viewer}
+    PRIVATE
+        main.cpp
+)
 
 # link against dependencies
 # -------------------------------------
-# target_link_libraries(${${PROJECT_NAME}_target_info_viewer}
-#     PRIVATE
-#         # library
-# )
+target_link_libraries(${${PROJECT_NAME}_target_info_viewer}
+    PRIVATE
+        ${${PROJECT_NAME}_target_libutil}::${${PROJECT_NAME}_target_libutil}
+)
 
 # define installation configuration
 # -------------------------------------

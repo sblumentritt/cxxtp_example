@@ -42,17 +42,7 @@ add_postbuild_strip(${${PROJECT_NAME}_target_libutil})
 
 # add source files and include sub-folder
 # -------------------------------------
-# target_sources(${${PROJECT_NAME}_target_libutil}
-#     PRIVATE
-#         # source file
-# )
-
-# link against dependencies
-# -------------------------------------
-# target_link_libraries(${${PROJECT_NAME}_target_libutil}
-#     PRIVATE
-#         # library
-# )
+add_subdirectory(date_time)
 
 # define installation configuration
 # -------------------------------------

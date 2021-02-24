@@ -2,7 +2,7 @@
 # -------------------------------------
 add_executable(${${PROJECT_NAME}_target_performance_test} EXCLUDE_FROM_ALL)
 add_executable(
-    test::${${PROJECT_NAME}_target_performance_test}}
+    test::${${PROJECT_NAME}_target_performance_test}
     ALIAS
     ${${PROJECT_NAME}_target_performance_test}
 )
@@ -45,6 +45,8 @@ target_sources(${${PROJECT_NAME}_target_performance_test}
     PRIVATE
         main_perf.cpp
 )
+
+add_subdirectory(date_time)
 
 # link against dependencies
 # -------------------------------------
